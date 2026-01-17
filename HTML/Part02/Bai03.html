@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var person1 = {
+        fullName: "Mark Miller",
+        mass: 78,
+        height: 1.69,
+      };
+      var person2 = {
+        fullName: "John Smith",
+        mass: 92,
+        height: 1.95,
+      };
+      var calcBMI = function (person) {
+        var bmi = person.mass / person.height ** 2;
+        return bmi;
+      };
+      if (calcBMI(person1) > calcBMI(person2)) {
+        console.log(
+          `John's BMI (${calcBMI(person1)}) is higher than Mark's (${calcBMI(
+            person2
+          )})!`
+        );
+      } else {
+        console.log(
+          `Mark's BMI (${calcBMI(person2)}) is higher than John's (${calcBMI(
+            person1
+          )}!`
+        );
+      }
+    </script>
+  </body>
+</html>
